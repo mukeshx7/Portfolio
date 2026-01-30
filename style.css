@@ -1,0 +1,42 @@
+/* Custom Styles for elements Tailwind can't easily do alone */
+body {
+    background-color: #282C33;
+    color: #ABB2BF;
+    font-family: 'Fira Code', monospace;
+    overflow-x: hidden;
+}
+
+/* The decorative dots pattern seen in the design */
+.dots-pattern {
+    background-image: radial-gradient(#ABB2BF 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+/* Typewriter cursor effect */
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #282C33; 
+}
+::-webkit-scrollbar-thumb {
+    background: #C778DD; 
+    border-radius: 4px;
+}
+
+/* Decorative outlines */
+.outline-box {
+    position: absolute;
+    border: 1px solid #ABB2BF;
+    z-index: -1;
+}

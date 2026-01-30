@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mukesh | Web Designer & Front-end Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#282C33",
+                        primary: "#C778DD",
+                        secondary: "#ABB2BF",
+                        border: "#ABB2BF",
+                        darker: "#1E2125",
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', "monospace"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="relative">
+    <!-- 
+    left-selction-icon -->
+    <div class="hidden md:block fixed left-8 top-0 w-[1px] h-[200px] bg-secondary opacity-50 z-40"></div>
+    <div class="hidden md:flex flex-col gap-3 fixed left-6 top-[210px] z-50">
+        <a href="https://github.com/mukeshx7" class="text-secondary hover:text-primary transition-colors"><i
+                class="fab fa-github fa-lg"></i></a>
+        <a href="https://www.instagram.com/mukeshx024?igsh=aWZpZ2JiYjRjdjk3"
+            class="text-secondary hover:text-primary transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
+        <!-- <a href="#" class="text-secondary hover:text-primary transition-colors"><i class="fab fa-figma fa-lg"></i></a> -->
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto px-6 md:px-12 pt-8 pb-20">
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center mb-16 md:mb-24">
+            <div class="flex items-center gap-2 font-bold text-white text-lg">
+                <i class="fas fa-cube text-primary"></i>
+                <span>Mukesh</span>
+            </div>
+
+            <div class="hidden md:flex gap-8 text-secondary font-medium">
+                <a href="#home" class="hover:text-white transition-colors"><span class="text-primary">#</span>home</a>
+                <a href="#projects" class="hover:text-white transition-colors"><span
+                        class="text-primary">#</span>works</a>
+                <a href="#about" class="hover:text-white transition-colors"><span
+                        class="text-primary">#</span>about-me</a>
+                <a href="#contacts" class="hover:text-white transition-colors"><span
+                        class="text-primary">#</span>contacts</a>
+                <select class="bg-transparent border-none text-secondary outline-none cursor-pointer">
+                    <option value="en" class="bg-bg">EN</option>
+                    <option value="ru" class="bg-bg">RU</option>
+                    <option value="ua" class="bg-bg">UA</option>
+                </select>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-bg z-50 hidden flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <div class="flex items-center gap-2 font-bold text-white text-lg">
+                    <i class="fas fa-cube text-primary"></i>
+                    <span>Mukesh</span>
+                </div>
+                <button id="close-menu-btn" class="text-3xl text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col gap-8 text-2xl font-medium">
+                <a href="#home" class="mobile-link hover:text-white"><span class="text-primary">#</span>home</a>
+                <a href="#projects" class="mobile-link hover:text-white"><span class="text-primary">#</span>works</a>
+                <a href="#about" class="mobile-link hover:text-white"><span class="text-primary">#</span>about-me</a>
+                <a href="#contacts" class="mobile-link hover:text-white"><span class="text-primary">#</span>contacts</a>
+            </div>
+            <div class="mt-auto flex gap-6 justify-center">
+                <a href="https://github.com/mukeshx7" class="text-white text-3xl"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white text-3xl"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/mukeshx024?igsh=aWZpZ2JiYjRjdjk3" class="text-white text-3xl"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="home" class="flex flex-col-reverse md:flex-row items-center justify-between mb-32 relative">
+            <div class="md:w-1/2 mt-12 md:mt-0">
+                <h1 class="text-3xl md:text-4xl font-semibold text-white leading-normal mb-6">
+                    i'm <span class="text-primary">web designer</span> and
+                    <span class="text-primary">front-end developer</span>
+                </h1>
+                <p class="text-secondary mb-8 leading-relaxed max-w-md">
+                    crafts responsive websites where technologies meet creativity
+                </p>
+                <a href="#contacts"
+                    class="inline-block border border-primary px-6 py-2 text-white hover:bg-primary/20 transition-all duration-300">
+                    Contact me!!
+                </a>
+            </div>
+
+            <div class="md:w-1/2 relative flex justify-center md:justify-end">
+                <div class="absolute left-0 top-10 w-32 h-32 opacity-30 pointer-events-none hidden md:block">
+                    <svg viewBox="0 0 100 100" fill="none" stroke="#C778DD" stroke-width="2">
+                        <rect x="20" y="20" width="60" height="60" />
+                        <rect x="10" y="50" width="40" height="40" />
+                    </svg>
+                </div>
+
+                <div class="relative z-10">
+                    <img style="
+                width: 200px;
+                height: 200px;
+                margin-bottom: 60px;
+                border-radius: 100%;
+                background-color: grey;
+                object-fit: cover;
+                margin-right: 140px;
+              " src="https://avatars.githubusercontent.com/u/222556284?s=400&u=dc7d692524bcab8a2a5c63f8872d7d5e6f585d45&v=4" />
+                    <div
+                        class="border border-secondary bg-bg p-2 flex items-center gap-2 absolute bottom-4 right-0 md:-right-4 w-[90%] md:w-auto translate-y-1/2 md:translate-y-0">
+                        <div class="w-4 h-4 bg-primary inline-block"></div>
+                        <span class="text-secondary text-sm">Open For <strong class="text-white">Work</strong></span>
+                    </div>
+                </div>
+
+                <div class="dots-pattern w-20 h-20 absolute bottom-10 right-10 -z-10"></div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="flex justify-center mb-24 relative">
+            <div class="relative max-w-2xl w-full">
+                <div class="absolute -top-3 left-4 bg-bg px-2 z-10">
+                    <i class="fas fa-quote-left text-2xl text-secondary"></i>
+                </div>
+                <div class="border border-secondary p-8 text-center relative">
+                    <p class="text-xl md:text-2xl font-medium text-white">
+                        “Programming isn’t about what you know; it’s about what you can figure out.”
+                    </p>
+                </div>
+                <div class="absolute -bottom-3 right-4 bg-bg px-2 z-10">
+                    <i class="fas fa-quote-right text-2xl text-secondary"></i>
+                </div>
+                <div class="border border-secondary p-4 mt-[-1px] ml-auto w-fit relative">
+                    <span class="text-white">- Mukesh</span>
+                </div>
+            </div>
+            <div class="outline-box w-20 h-20 right-0 top-1/2 border-secondary"></div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-24">
+            <div class="flex justify-between items-center mb-12">
+                <div class="flex items-center gap-4 w-2/3">
+                    <h2 class="text-3xl text-white font-medium">
+                        <span class="text-primary">#</span>projects
+                    </h2>
+                    <div class="h-[1px] bg-primary w-1/3 md:w-1/2"></div>
+                </div>
+                <!-- <a
+            href="#"
+            class="text-white hover:text-primary transition-colors text-sm md:text-base"
+            >View all ~~></a
+          > -->
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card 1 -->
+                <div class="border border-secondary">
+                    <div class="h-48 border-b border-secondary overflow-hidden group">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-orange-900 to-gray-900 flex items-center justify-center relative">
+                            <h3 class="text-2xl font-bold text-white z-10">Coming Soon</h3>
+                            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-all"></div>
+                        </div>
+                    </div>
+                    <div class="p-2 border-b border-secondary text-secondary text-sm">
+                        XXX
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-2xl text-white font-medium mb-4">Coming Soon</h3>
+                        <p class="text-secondary mb-4 text-sm">
+                            XXX
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="border border-primary px-4 py-1 text-white hover:bg-primary/20 transition text-sm">Live
+                                &lt;~&gt;</a>
+                            <!-- <a
+                  href="#"
+                  class="border border-secondary px-4 py-1 text-secondary hover:bg-secondary/20 transition text-sm"
+                  >Cached >=</a
+                > -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="border border-secondary">
+                    <div class="h-48 border-b border-secondary overflow-hidden relative">
+                        <div
+                    
+                            class="w-full h-full bg-gradient-to-br from-green-900 to-gray-900 flex items-center justify-center">
+                            <div
+                                class="border-2 border-green-500 rounded p-2 text-green-500 font-bold flex flex-col items-center">
+                                <i class="fas fa-lock mb-1"></i> Coming Soon
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class="p-2 border-b border-secondary text-secondary text-sm">
+                        XXX
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-2xl text-white font-medium mb-4">Coming Soon</h3>
+                        
+                        <p class="text-secondary mb-4 text-sm">XXX</p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="border border-primary px-4 py-1 text-white hover:bg-primary/20 transition text-sm">Live
+                                &lt;~&gt;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="border border-secondary">
+                    <div class="h-48 border-b border-secondary overflow-hidden">
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-purple-900 to-gray-900 flex items-center justify-center">
+                            <h3 class="text-2xl font-bold text-white italic">Coming Soon</h3>
+                        </div>
+                    </div>
+                    <div class="p-2 border-b border-secondary text-secondary text-sm">
+                        XXX
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-2xl text-white font-medium mb-4">
+                            XXX
+                        </h3>
+                        <p class="text-secondary mb-4 text-sm">
+                            XXX
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="border border-primary px-4 py-1 text-white hover:bg-primary/20 transition text-sm">Live
+                                &lt;~&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-24 relative">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl text-white font-medium">
+                    <span class="text-primary">#</span>skills
+                </h2>
+                <div class="h-[1px] bg-primary w-1/4"></div>
+            </div>
+            <div class="hidden lg:block absolute left-10 top-20 dots-pattern w-16 h-16"></div>
+            <div class="hidden lg:block absolute left-40 bottom-10 w-20 h-20 border border-secondary opacity-50"></div>
+
+            <div class="flex flex-col lg:flex-row gap-8 justify-end">
+                <div class="hidden lg:block w-1/3 relative"></div>
+                <div class="flex flex-wrap gap-4 w-full lg:w-2/3 justify-end">
+                    <div class="border border-secondary h-fit w-full sm:w-auto min-w-[180px]">
+                        <div class="p-2 font-bold text-white border-b border-secondary">
+                            Languages
+                        </div>
+                        <div class="p-2 text-secondary space-y-1">
+                            <div>C,C++,Python,Java</div>
+                            <div>JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="border border-secondary h-fit w-full sm:w-auto min-w-[180px]">
+                        <div class="p-2 font-bold text-white border-b border-secondary">
+                            Databases
+                        </div>
+                        <div class="p-2 text-secondary space-y-1">
+                            <div>SQL</div>
+                            <div>Mongo</div>
+                        </div>
+                    </div>
+                    <div class="border border-secondary h-fit w-full sm:w-auto min-w-[180px]">
+                        <div class="p-2 font-bold text-white border-b border-secondary">
+                            Tools
+                        </div>
+                        <div class="p-2 text-secondary space-y-1">
+                            <div>VSCode</div>
+                            <div></div>
+                            <div>Git</div>
+                        </div>
+                    </div>
+                    <div class="border border-secondary h-fit w-full sm:w-auto min-w-[180px]">
+                        <div class="p-2 font-bold text-white border-b border-secondary">
+                            Other
+                        </div>
+                        <div class="p-2 text-secondary space-y-1">
+                            <div>HTML CSS EJS</div>
+                            <div>Tailwind CSS</div>
+                        </div>
+                    </div>
+                    <div class="border border-secondary h-fit w-full sm:w-auto min-w-[180px]">
+                        <div class="p-2 font-bold text-white border-b border-secondary">
+                            Frameworks
+                        </div>
+                        <div class="p-2 text-secondary space-y-1">
+                            <div>Reactjs</div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="mb-32">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-3xl text-white font-medium">
+                    <span class="text-primary">#</span>about-me
+                </h2>
+                <div class="h-[1px] bg-primary w-1/4"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-1/2">
+                    <p class="text-secondary leading-relaxed mb-6">
+                        Hello, i'm Mukesh!
+                        <br /><br />
+                        I'm a self-taught front-end developer based in Gujrat, india . I
+                        can develop responsive websites from scratch and raise them into
+                        modern user-friendly web experiences.
+                        <br /><br />
+                        Transforming my creativity and knowledge into a websites has been
+                        my passion for over a year. I have been helping various clients to
+                        establish their presence online. I always strive to learn about
+                        the newest technologies and frameworks.
+                    </p>
+                    <!-- <a href="#" class="inline-block border border-primary px-6 py-2 text-white hover:bg-primary/20 transition-all duration-300">Read more -></a> -->
+                </div>
+
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="dots-pattern w-24 h-24 absolute top-0 left-10 z-0"></div>
+                    <div class="relative z-10 w-full max-w-sm">
+                        <img style="
+                  width: 200px;
+                  height: 200px;
+                  margin-bottom: 60px;
+                  border-radius: 100%;
+                  background-color: grey;
+                  object-fit: cover;
+                  margin-left: 90px;
+                " src="https://avatars.githubusercontent.com/u/222556284?s=400&u=dc7d692524bcab8a2a5c63f8872d7d5e6f585d45&v=4" />
+                    </div>
+                    <div class="dots-pattern w-20 h-20 absolute bottom-10 right-0 z-20"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contacts" class="border-t border-secondary pt-8 pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div>
+                    <div class="flex items-center gap-2 font-bold text-white text-lg mb-4">
+                        <i class="fas fa-cube text-primary"></i>
+                        <span>Mukesh</span>
+                        <span class="text-secondary font-normal text-sm ml-2">mukeshrajpurohit3637@gmail.com</span>
+                    </div>
+                    <p class="text-secondary text-sm">
+                        Web designer and front-end developer
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-medium text-lg mb-4">Media</h3>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/mukeshx7" class="text-secondary hover:text-white text-xl"><i
+                                class="fab fa-github"></i></a>
+                        <a href="#" class="text-secondary hover:text-white text-xl"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/mukeshx024?igsh=aWZpZ2JiYjRjdjk3"
+                            class="text-secondary hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 text-secondary text-sm">
+                &copy; Copyright 2026. Made by Mukesh
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
